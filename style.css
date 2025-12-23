@@ -1,0 +1,57 @@
+/* 1. Reset Básico
+   Tira as margens que o navegador coloca sozinho */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que o tamanho dos elementos inclua a borda */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Depois mudamos para uma fonte moderna */
+    line-height: 1.6;
+}
+
+/* 2. A Classe .hero (A capa do site) */
+.hero {
+    /* Altura de 100% da "View Height" (vh). 
+       Ou seja, ocupa a tela inteira do celular/pc logo de cara */
+    height: 100vh; 
+    
+    /* Imagem de fundo (coloque uma foto bonita na pasta img) */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/foto-pantanal.jpg');
+    background-size: cover; /* Cobre tudo sem esticar */
+    background-position: center;
+    
+    /* AQUI ESTÁ A MÁGICA MODERNA: FLEXBOX */
+    display: flex;             /* Ativa o modo flexível */
+    flex-direction: column;    /* Coloca um item embaixo do outro */
+    justify-content: center;   /* Centraliza verticalmente (no meio da tela) */
+    align-items: center;       /* Centraliza horizontalmente */
+    text-align: center;
+    color: white;
+}
+
+/* 3. O Título */
+.hero h1 {
+    font-size: 3rem; /* "rem" é melhor que "px" para acessibilidade */
+    margin-bottom: 10px;
+}
+
+/* 4. O Botão (Seu pedido) */
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366; /* Verde WhatsApp */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none; /* Tira o sublinhado do link */
+    font-weight: bold;
+    border-radius: 50px; /* Bordas redondas modernas */
+    margin-top: 20px;
+    transition: transform 0.2s; /* Animação suave */
+}
+
+/* Efeito quando passa o mouse */
+.btn-whatsapp:hover {
+    background-color: #1ebc57;
+    transform: scale(1.05); /* Aumenta um pouquinho o botão */
+}

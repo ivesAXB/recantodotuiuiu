@@ -170,3 +170,13 @@ h1, h2, h3, .btn-whatsapp {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
     }
 }
+
+#servicos {
+    width: 100%;
+    background-image: url('img/foto-pantanal.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('img/foto-pantanal.jpg');
+    padding: 50px 0;
+}

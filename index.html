@@ -10,6 +10,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/stork.png" type="image/x-icon">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pousada Recanto do Tuiuiú | Pesca e Ecoturismo">
+    <meta property="og:description" content="Venha pescar Dourado e curtir a natureza no coração do Pantanal. Reservas abertas!">
+    <meta property="og:url" content="https://ivesAXB.github.io/recantodotuiuiu/">
+    
+    <meta property="og:image" content="https://ivesAXB.github.io/recantodotuiuiu/img/foto-pantanal.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     
     </head>
 <body>
@@ -19,9 +29,13 @@
             <h1>Pousada Recanto do Tuiuiu</h1>
             <p>A melhor experiência de pesca e natureza no coração do Pantanal.</p>
             
-            <a href="https://wa.me/556599713778" class="btn-whatsapp" target="_blank">
+            <a href="https://wa.me/556599713778?text=Ol%C3%A1!%20Vi%20o%20SITE%20OFICIAL%20e%20quero%20reservar." class="btn-whatsapp" target="_blank">
                 Falar no WhatsApp
             </a>
+            <a href="https://wa.me/556599713778?text=Ol%C3%A1!%20Vi%20o%20SITE%20OFICIAL%20e%20quero%20reservar." class="zap-flutuante" target="_blank">
+                💬
+            </a>
+
         </div>
     </header>
 
@@ -77,6 +91,34 @@
     <footer>
         <p>&copy; 2025 Pousada Pantanal. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+        // Configuração comum para todas as animações
+        ScrollReveal({ 
+            reset: true,             // Se rolar para cima e voltar, anima de novo
+            distance: '60px',        // Distância que o elemento "percorre"
+            duration: 1500,          // Duração (mais lento = mais elegante)
+            delay: 200               // Atraso para começar
+        });
+
+        // O que vai acontecer com cada parte do site:
+        
+        // O Título principal vem de cima
+        ScrollReveal().reveal('.hero h1', { delay: 100, origin: 'left' });
+        ScrollReveal().reveal('.hero p', { delay: 200, origin: 'right' });
+        
+        // Os Cards de serviços aparecem de baixo, um por um
+        // (Intervalo faz eles aparecerem em escadinha)
+        ScrollReveal().reveal('.card', { interval: 100, origin: 'bottom' });
+
+        // O Mapa aparece vindo da esquerda
+        ScrollReveal().reveal('.mapa-responsivo', { delay: 100, origin: 'left' });
+        
+        // O Título das seções
+        ScrollReveal().reveal('.container-secao h2', { origin: 'top' });
+    </script>
 
 </body>
 </html>

@@ -23,6 +23,22 @@
     
     </head>
 <body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">Recanto do Tuiuiú</a> 
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#servicos">A Pousada</a></li>
+            <li><a href="#pesca">Pesca</a></li>
+            <li><a href="#epocas">Épocas</a></li>
+            <li><a href="#localizacao">Como Chegar</a></li>
+        </ul>
+
+        <div class="menu-mobile-icon" onclick="toggleMenu()">
+            ☰
+        </div>
+    </nav>
 
     <header class="hero">
         <div class="container">
@@ -70,6 +86,65 @@
                 </div>
             </div>
         </section>
+
+        <section id="pesca" style="padding: 60px 20px; background-color: #fff;">
+            <div class="container-secao">
+                <h2>Pesca Esportiva</h2>
+                <p>Conheça os troféus que te esperam em nossa baía.</p>
+
+                <div class="grade-servicos">
+                    <article class="card">
+                        <img src="img/dourado.jpg" alt="Peixe Dourado">
+                        <div class="card-texto">
+                            <h3>Dourado</h3>
+                            <p>O rei do rio! Melhor Época: Setembro à Novembro.</p>
+                    </article>
+                    <article class="card">
+                    <img src="img/pintado.jpg" alt="Peixe Pintado">
+                    <div class="card-texto">
+                        <h3>O Pintado</h3>
+                        <p>Couro nobre. Melhor época: Época da seca (Maio a Agosto).</p>
+                    </div>
+                </article>    
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="epocas" style="padding: 60px 20px; background-color: #f9f9f9;">
+        <div class="container-secao">
+            <h2>Melhor Época para Viajar</h2>
+            
+            <div style="overflow-x: auto;"> <table class="tabela-epocas">
+                    <thead>
+                        <tr>
+                            <th>Mês</th>
+                            <th>O que esperar?</th>
+                            <th>Nível do Rio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jan - Mar</td>
+                            <td>Defeso (Piracema) - Apenas Contemplação</td>
+                            <td>🌊 Cheia (Alagado)</td>
+                        </tr>
+                        <tr>
+                            <td>Abr - Jun</td>
+                            <td>Início da Pesca / Vazante</td>
+                            <td>💧 Baixando</td>
+                        </tr>
+                        <tr>
+                            <td>Jul - Out</td>
+                            <td><strong>Alta Temporada de Pesca</strong></td>
+                            <td>🏖️ Seca (Praias)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
     </main>
 
     <section id="localizacao" style="background-color: #f4f4f4; padding: 50px 20px; text-align: center;">
@@ -117,6 +192,13 @@
         
         // O Título das seções
         ScrollReveal().reveal('.container-secao h2', { origin: 'top' });
+    </script>
+    <script>
+    // Função para abrir/fechar menu mobile
+    function toggleMenu() {
+        const menu = document.querySelector('.nav-links');
+        menu.classList.toggle('active');
+    }
     </script>
 
 </body>

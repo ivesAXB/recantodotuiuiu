@@ -21,6 +21,54 @@ h1, h2, h3, .btn-whatsapp {
     font-family: 'Poppins', sans-serif;
 }
 
+.navbar {
+    position: fixed; /* Fixa na tela */
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo preto quase transparente */
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between; /* Logo na esq, Menu na dir */
+    align-items: center;
+    z-index: 1000; /* Garante que fique em cima de tudo */
+    backdrop-filter: blur(5px); /* Efeito de vidro (Blur) - SUPER MODERNO */
+}
+
+.logo a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex; /* Coloca um do lado do outro */
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #25D366; /* Fica verde ao passar o mouse */
+}
+
+.menu-mobile-icon {
+    display: none; /* Esconde o hambúrguer no PC */
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 
 /* 2. A Classe .hero (A capa do site) */
 .hero {
@@ -179,4 +227,58 @@ h1, h2, h3, .btn-whatsapp {
     background-repeat: no-repeat;
     background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('img/foto-pantanal.jpg');
     padding: 50px 0;
+}
+
+.tabela-epocas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabela-epocas th, .tabela-epocas td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.tabela-epocas th {
+    background-color: #25D366; /* Verde do tema */
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        /* Esconde o menu normal e transforma num gavetão lateral */
+        position: fixed;
+        right: -100%; /* Começa escondido fora da tela */
+        top: 60px; /* Altura da barra */
+        height: 100vh;
+        width: 50%; /* Ocupa metade da tela */
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column; /* Um embaixo do outro */
+        align-items: center;
+        padding-top: 50px;
+        transition: right 0.5s ease; /* Animação de deslizar */
+    }
+
+    .nav-links li {
+        margin: 30px 0;
+    }
+
+    .menu-mobile-icon {
+        display: block; /* Mostra o hambúrguer só no celular */
+    }
+
+    /* Classe mágica que o JavaScript vai adicionar */
+    .nav-links.active {
+        right: 0; /* Traz o menu para a tela */
+    }
 }
